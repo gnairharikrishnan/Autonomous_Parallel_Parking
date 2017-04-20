@@ -2,7 +2,7 @@
 	
   Authors: Harikrishnan G Nair
            Denny Mathews
-           John Vasques
+           John Vasquez
            Steven Pill
            Harish Puvvada
 
@@ -10,19 +10,19 @@
 
 *****************************************************************************************************************
 
-      Copyright © 2017 Harikrishnan G Nair, Denny Mathews, John Vasques, Steven Pill, Harish Puvvada @ NYU
+      Copyright © 2017 Harikrishnan G Nair, Denny Mathews, John Vasquez, Steven Pill, Harish Puvvada @ NYU
 
  ****************************************************************************************************************/
 
 #include "cpu.h"
-#include "board_led.h"
-
-#include "foo.h"
+#include "interrupts.h"
 
 int main()
 {
   cpu_init();
-  board_led_init();
-
+  GPIOInterruptSetup();
   return 0;
 }
+
+
+
