@@ -16,11 +16,15 @@
 
 #include "cpu.h"
 #include "interrupts.h"
+#include "uart.h"
+#include <stdio.h>
 
 int main()
 {
   cpu_init();
+  uart_debug_init();
   GPIOInterruptSetup();
+
   return 0;
 }
 
