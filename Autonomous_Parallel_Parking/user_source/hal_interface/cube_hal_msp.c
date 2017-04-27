@@ -24,7 +24,7 @@ void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef* htim_pwm)
 		 */
 		__HAL_RCC_TIM2_CLK_ENABLE();
 
-		GPIO_InitStruct.Pin = GPIO_PIN_6 | GPIO_PIN_7;
+		GPIO_InitStruct.Pin = GPIO_PIN_6 | GPIO_PIN_7 | GPIO_PIN_3 | GPIO_PIN_4;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
 		GPIO_InitStruct.Pull = GPIO_PULLUP;
 		GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;

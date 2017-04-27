@@ -21,9 +21,9 @@
 // Custom user APIs needed for generic algorithmic libraries that are hardware-independent:
 #include "foo.h"
 
-#define HIGH      6000
-#define LOW       0
-#define MEDIUM    3000
+#define HIGH      5000
+#define LOW       10
+#define MEDIUM    2500
 
 void move_forward()
 {
@@ -103,15 +103,15 @@ int main()
     else
     {
       move_forward();
-      cpu_sw_delay(5000U);
+      cpu_sw_delay(500U);
       move_back();
-      cpu_sw_delay(5000U); 
+      cpu_sw_delay(500U); 
       turn_f_right();
-      cpu_sw_delay(5000U); 
+      cpu_sw_delay(500U); 
       turn_f_left();
-      cpu_sw_delay(5000U); 
+      cpu_sw_delay(500U); 
       brake();
-      cpu_sw_delay(5000U); 
+      cpu_sw_delay(500U); 
      
     }
   }

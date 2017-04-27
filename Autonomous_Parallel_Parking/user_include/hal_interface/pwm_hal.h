@@ -12,7 +12,7 @@ void configure_channel(uint32_t channel_no, uint32_t new_pulse);
 
 void start_channel(uint32_t channel_no);
 
-void stop_channel(uint32_t channel_no, uint32_t new_pulse);
+void stop_channel(uint32_t channel_no);
 
 
 #endif
