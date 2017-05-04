@@ -103,7 +103,8 @@ HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority)
   
    // Compute the prescaler value to have TIM6 counter clock equal to 1MHz 
   uwPrescalerValue = (uint32_t) ((uwTimclock / 1000000U) - 1U);
-  
+
+  //uwPrescalerValue = 1U;
   /* Initialize TIM6 */
   TimHandle.Instance = TIM6;
   
@@ -159,11 +160,11 @@ void HAL_ResumeTick(void)
   * a global variable "uwTick" used as application time base.
   * @param  htim : TIM handle
   * @retval None
-  */
+  
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   HAL_IncTick();
-}
+}*/
 
 /**
   * @brief  This function handles TIM interrupt request.
