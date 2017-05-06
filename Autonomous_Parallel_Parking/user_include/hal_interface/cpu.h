@@ -8,5 +8,6 @@
 
 void cpu_init(void); // This function calls all CPU HAL (Hardware Abstraction Layer)-specific functions that initialize the CPU clock, flash and peripherals.
 void cpu_sw_delay(uint32_t ms); // A simple busy-loop delay function that blocks until the specified ms number of milliseconds have elapsed.
+void cpu_sw_udelay(uint32_t us); // A simple busy-loop delay function that blocks until the specified ms number of milliseconds have elapsed.
 
 #endif

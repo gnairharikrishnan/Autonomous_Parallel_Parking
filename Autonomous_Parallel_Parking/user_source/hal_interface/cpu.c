@@ -61,3 +61,18 @@ void cpu_sw_delay(uint32_t ms)
 		}
 	}
 }
+
+
+void cpu_sw_udelay(uint32_t us)
+{
+  uint32_t i = 0U;
+  uint32_t j = 0U;
+
+  for(i = 0U; i < us; ++i)
+  {
+    for(j = 0U; j < (uint32_t)CPU_TICKS_PER_MS/1000; ++j)
+    {
+      asm("nop");
+    }
+  }
+}

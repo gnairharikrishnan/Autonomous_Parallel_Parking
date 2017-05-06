@@ -113,16 +113,16 @@ HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority)
   + ClockDivision = 0
   + Counter direction = Up
   */
-  TimHandle.Init.Period = (1000000U / 1000U) - 1U;
-  TimHandle.Init.Prescaler = uwPrescalerValue;
-  TimHandle.Init.ClockDivision = 0U;
-  TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;
-  TimHandle.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if(HAL_TIM_Base_Init(&TimHandle) == HAL_OK)
-  {
-    /* Start the TIM time Base generation in interrupt mode */
-    return HAL_TIM_Base_Start_IT(&TimHandle);
-  }
+//  TimHandle.Init.Period = (1000000U / 1000U) - 1U;
+//  TimHandle.Init.Prescaler = uwPrescalerValue;
+//  TimHandle.Init.ClockDivision = 0U;
+//  TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;
+//  TimHandle.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+//  if(HAL_TIM_Base_Init(&TimHandle) == HAL_OK)
+//  {
+//    /* Start the TIM time Base generation in interrupt mode */
+//    return HAL_TIM_Base_Start_IT(&TimHandle);
+ // }
   
   /* Return function status */
   return HAL_ERROR;
@@ -160,10 +160,10 @@ void HAL_ResumeTick(void)
   * @param  htim : TIM handle
   * @retval None
   */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  HAL_IncTick();
-}
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//{
+//  HAL_IncTick();
+//}
 
 /**
   * @brief  This function handles TIM interrupt request.
