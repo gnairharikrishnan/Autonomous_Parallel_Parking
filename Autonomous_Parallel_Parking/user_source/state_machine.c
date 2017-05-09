@@ -141,7 +141,7 @@ uint8_t state_execute(void)
 				next_dir = LEFT; //calculate_next_dominant_turn(ld, rd);
 			else if(rd > REF_DIST_FROM_RGT_WALL)
 				next_dir = RECENTER_RIGHT; //Move towards the wall 
-			else if(rd < (REF_DIST_FROM_RGT_WALL - 5))
+			else if(rd < (REF_DIST_FROM_RGT_WALL - 6))
 					next_dir = RECENTER_LEFT;
             else
 				next_dir = FORWARD;

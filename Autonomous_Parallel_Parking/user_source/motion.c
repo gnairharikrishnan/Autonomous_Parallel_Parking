@@ -92,7 +92,7 @@ void move_robot(uint8_t next_dir)
       //brake();
       //cpu_sw_delay(10U);
 			move_forward();
-      cpu_sw_delay(10U);
+      cpu_sw_delay(05U);
 
 			break;
 		case BACK:
