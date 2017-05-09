@@ -1065,7 +1065,7 @@ LOAD c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc
                 0x08000000                g_pfnVectors
                 0x08000188                . = ALIGN (0x4)
 
-.text           0x08000188     0x7890
+.text           0x08000188     0x78e8
                 0x08000188                . = ALIGN (0x4)
  *(.text)
  .text          0x08000188       0x5c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
@@ -1363,304 +1363,306 @@ LOAD c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc
                 0x080060a0                InitializeTimer
                 0x0800610c                init_sensor
                 0x0800611c                usensor_check_distance
- .text          0x0800614c      0x14c user_source/motion.o
+ .text          0x0800614c      0x1a4 user_source/motion.o
                 0x0800614c                move_forward
                 0x08006178                move_back
                 0x080061a4                turn_f_left
                 0x080061cc                turn_f_right
-                0x080061f4                brake
-                0x0800621c                move_robot
- .text          0x08006298       0x10 user_source/foo.o
-                0x08006298                foo
-                0x0800629c                TEST_FOO
- .text          0x080062a8       0x74 user_source/hal_interface/uart_hal.o
-                0x080062a8                uart_hal_init
-                0x080062e8                uart_hal_send_byte_blocking
-                0x08006300                uart_hal_get_byte_blocking
- .text          0x0800631c       0x7c user_source/hal_interface/cpu.o
-                0x0800631c                cpu_init
-                0x0800636c                cpu_sw_delay
-                0x08006384                cpu_sw_udelay
- .text          0x08006398       0x1c user_source/hal_interface/pin_setup.o
-                0x08006398                Pin_Set
- .text          0x080063b4      0x258 user_source/hal_interface/pwm_hal.o
-                0x080063b4                init_pwm
-                0x08006518                configure_channel
-                0x08006580                start_channel
-                0x080065c4                stop_channel
- .text          0x0800660c      0x190 user_source/hal_interface/newlib_stubs.o
-                0x0800660c                _exit
-                0x08006628                _close
-                0x08006630                _execve
-                0x08006640                _fork
-                0x08006650                _fstat
-                0x0800665c                _getpid
-                0x08006660                _isatty
-                0x08006678                _kill
-                0x08006688                _link
-                0x08006698                _lseek
-                0x0800669c                _read
-                0x080066d0                _stat
-                0x080066dc                _times
-                0x080066e4                _unlink
-                0x080066f4                _wait
-                0x08006704                _write
-                0x08006754                _sbrk
- .text          0x0800679c       0x90 user_source/hal_interface/interrupts.o
-                0x0800679c                EXTI0_IRQHandler
-                0x080067a4                EXTI2_TSC_IRQHandler
-                0x080067ac                EXTI4_IRQHandler
-                0x080067b4                GPIOInterruptSetup
- .text          0x0800682c       0xd4 user_source/hal_interface/cube_hal_msp.o
-                0x0800682c                HAL_UART_MspInit
-                0x080068a8                HAL_TIM_PWM_MspInit
+                0x080061f4                turn_f_left_slow
+                0x0800621c                turn_f_right_slow
+                0x08006244                brake
+                0x0800626c                move_robot
+ .text          0x080062f0       0x10 user_source/foo.o
+                0x080062f0                foo
+                0x080062f4                TEST_FOO
+ .text          0x08006300       0x74 user_source/hal_interface/uart_hal.o
+                0x08006300                uart_hal_init
+                0x08006340                uart_hal_send_byte_blocking
+                0x08006358                uart_hal_get_byte_blocking
+ .text          0x08006374       0x7c user_source/hal_interface/cpu.o
+                0x08006374                cpu_init
+                0x080063c4                cpu_sw_delay
+                0x080063dc                cpu_sw_udelay
+ .text          0x080063f0       0x1c user_source/hal_interface/pin_setup.o
+                0x080063f0                Pin_Set
+ .text          0x0800640c      0x258 user_source/hal_interface/pwm_hal.o
+                0x0800640c                init_pwm
+                0x08006570                configure_channel
+                0x080065d8                start_channel
+                0x0800661c                stop_channel
+ .text          0x08006664      0x190 user_source/hal_interface/newlib_stubs.o
+                0x08006664                _exit
+                0x08006680                _close
+                0x08006688                _execve
+                0x08006698                _fork
+                0x080066a8                _fstat
+                0x080066b4                _getpid
+                0x080066b8                _isatty
+                0x080066d0                _kill
+                0x080066e0                _link
+                0x080066f0                _lseek
+                0x080066f4                _read
+                0x08006728                _stat
+                0x08006734                _times
+                0x0800673c                _unlink
+                0x0800674c                _wait
+                0x0800675c                _write
+                0x080067ac                _sbrk
+ .text          0x080067f4       0x90 user_source/hal_interface/interrupts.o
+                0x080067f4                EXTI0_IRQHandler
+                0x080067fc                EXTI2_TSC_IRQHandler
+                0x08006804                EXTI4_IRQHandler
+                0x0800680c                GPIOInterruptSetup
+ .text          0x08006884       0xd4 user_source/hal_interface/cube_hal_msp.o
+                0x08006884                HAL_UART_MspInit
+                0x08006900                HAL_TIM_PWM_MspInit
  *(.text*)
  .text.__libc_init_array
-                0x08006900       0x50 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-init.o)
-                0x08006900                __libc_init_array
- .text.memset   0x08006950       0x9c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-memset.o)
-                0x08006950                memset
+                0x08006958       0x50 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-init.o)
+                0x08006958                __libc_init_array
+ .text.memset   0x080069a8       0x9c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-memset.o)
+                0x080069a8                memset
  .text.startup.register_fini
-                0x080069ec       0x14 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x08006a00        0xc c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-atexit.o)
-                0x08006a00                atexit
+                0x08006a44       0x14 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08006a58        0xc c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-atexit.o)
+                0x08006a58                atexit
  .text.__libc_fini_array
-                0x08006a0c       0x28 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fini.o)
-                0x08006a0c                __libc_fini_array
+                0x08006a64       0x28 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fini.o)
+                0x08006a64                __libc_fini_array
  .text.__register_exitproc
-                0x08006a34       0xa4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__atexit.o)
-                0x08006a34                __register_exitproc
+                0x08006a8c       0xa4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__atexit.o)
+                0x08006a8c                __register_exitproc
  .text.Reset_Handler
-                0x08006ad8       0x50 ../arch/stm32/f3/src/CMSIS/startup_stm32f303xc.o
-                0x08006ad8                Reset_Handler
+                0x08006b30       0x50 ../arch/stm32/f3/src/CMSIS/startup_stm32f303xc.o
+                0x08006b30                Reset_Handler
  .text.Default_Handler
-                0x08006b28        0x2 ../arch/stm32/f3/src/CMSIS/startup_stm32f303xc.o
-                0x08006b28                RTC_Alarm_IRQHandler
-                0x08006b28                TIM8_TRG_COM_IRQHandler
-                0x08006b28                TIM8_CC_IRQHandler
-                0x08006b28                DebugMon_Handler
-                0x08006b28                TIM1_CC_IRQHandler
-                0x08006b28                HardFault_Handler
-                0x08006b28                USB_HP_IRQHandler
-                0x08006b28                SysTick_Handler
-                0x08006b28                PVD_IRQHandler
-                0x08006b28                TAMP_STAMP_IRQHandler
-                0x08006b28                PendSV_Handler
-                0x08006b28                NMI_Handler
-                0x08006b28                EXTI3_IRQHandler
-                0x08006b28                USB_HP_CAN_TX_IRQHandler
-                0x08006b28                I2C2_EV_IRQHandler
-                0x08006b28                FPU_IRQHandler
-                0x08006b28                TIM1_UP_TIM16_IRQHandler
-                0x08006b28                UsageFault_Handler
-                0x08006b28                ADC1_2_IRQHandler
-                0x08006b28                SPI1_IRQHandler
-                0x08006b28                CAN_SCE_IRQHandler
-                0x08006b28                TIM8_UP_IRQHandler
-                0x08006b28                DMA2_Channel2_IRQHandler
-                0x08006b28                DMA1_Channel4_IRQHandler
-                0x08006b28                USART3_IRQHandler
-                0x08006b28                DMA1_Channel7_IRQHandler
-                0x08006b28                UART5_IRQHandler
-                0x08006b28                ADC3_IRQHandler
-                0x08006b28                TIM4_IRQHandler
-                0x08006b28                CAN_RX1_IRQHandler
-                0x08006b28                DMA2_Channel1_IRQHandler
-                0x08006b28                I2C1_EV_IRQHandler
-                0x08006b28                DMA1_Channel6_IRQHandler
-                0x08006b28                UART4_IRQHandler
-                0x08006b28                DMA2_Channel4_IRQHandler
-                0x08006b28                TIM3_IRQHandler
-                0x08006b28                RCC_IRQHandler
-                0x08006b28                DMA1_Channel1_IRQHandler
-                0x08006b28                Default_Handler
-                0x08006b28                USBWakeUp_RMP_IRQHandler
-                0x08006b28                EXTI15_10_IRQHandler
-                0x08006b28                TIM7_IRQHandler
-                0x08006b28                EXTI9_5_IRQHandler
-                0x08006b28                RTC_WKUP_IRQHandler
-                0x08006b28                SPI2_IRQHandler
-                0x08006b28                USB_LP_CAN_RX0_IRQHandler
-                0x08006b28                MemManage_Handler
-                0x08006b28                SVC_Handler
-                0x08006b28                DMA2_Channel5_IRQHandler
-                0x08006b28                DMA1_Channel5_IRQHandler
-                0x08006b28                USB_LP_IRQHandler
-                0x08006b28                TIM1_TRG_COM_TIM17_IRQHandler
-                0x08006b28                DMA1_Channel3_IRQHandler
-                0x08006b28                ADC4_IRQHandler
-                0x08006b28                WWDG_IRQHandler
-                0x08006b28                TIM2_IRQHandler
-                0x08006b28                COMP7_IRQHandler
-                0x08006b28                COMP1_2_3_IRQHandler
-                0x08006b28                EXTI1_IRQHandler
-                0x08006b28                USART2_IRQHandler
-                0x08006b28                COMP4_5_6_IRQHandler
-                0x08006b28                I2C2_ER_IRQHandler
-                0x08006b28                DMA1_Channel2_IRQHandler
-                0x08006b28                TIM8_BRK_IRQHandler
-                0x08006b28                FLASH_IRQHandler
-                0x08006b28                BusFault_Handler
-                0x08006b28                USART1_IRQHandler
-                0x08006b28                SPI3_IRQHandler
-                0x08006b28                I2C1_ER_IRQHandler
-                0x08006b28                USBWakeUp_IRQHandler
-                0x08006b28                DMA2_Channel3_IRQHandler
-                0x08006b28                TIM1_BRK_TIM15_IRQHandler
- *fill*         0x08006b2a        0x2 
- .text.startup  0x08006b2c       0x58 Autonomous_Parallel_Parking.o
-                0x08006b2c                main
- .text.setvbuf  0x08006b84      0x150 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-setvbuf.o)
-                0x08006b84                setvbuf
+                0x08006b80        0x2 ../arch/stm32/f3/src/CMSIS/startup_stm32f303xc.o
+                0x08006b80                RTC_Alarm_IRQHandler
+                0x08006b80                TIM8_TRG_COM_IRQHandler
+                0x08006b80                TIM8_CC_IRQHandler
+                0x08006b80                DebugMon_Handler
+                0x08006b80                TIM1_CC_IRQHandler
+                0x08006b80                HardFault_Handler
+                0x08006b80                USB_HP_IRQHandler
+                0x08006b80                SysTick_Handler
+                0x08006b80                PVD_IRQHandler
+                0x08006b80                TAMP_STAMP_IRQHandler
+                0x08006b80                PendSV_Handler
+                0x08006b80                NMI_Handler
+                0x08006b80                EXTI3_IRQHandler
+                0x08006b80                USB_HP_CAN_TX_IRQHandler
+                0x08006b80                I2C2_EV_IRQHandler
+                0x08006b80                FPU_IRQHandler
+                0x08006b80                TIM1_UP_TIM16_IRQHandler
+                0x08006b80                UsageFault_Handler
+                0x08006b80                ADC1_2_IRQHandler
+                0x08006b80                SPI1_IRQHandler
+                0x08006b80                CAN_SCE_IRQHandler
+                0x08006b80                TIM8_UP_IRQHandler
+                0x08006b80                DMA2_Channel2_IRQHandler
+                0x08006b80                DMA1_Channel4_IRQHandler
+                0x08006b80                USART3_IRQHandler
+                0x08006b80                DMA1_Channel7_IRQHandler
+                0x08006b80                UART5_IRQHandler
+                0x08006b80                ADC3_IRQHandler
+                0x08006b80                TIM4_IRQHandler
+                0x08006b80                CAN_RX1_IRQHandler
+                0x08006b80                DMA2_Channel1_IRQHandler
+                0x08006b80                I2C1_EV_IRQHandler
+                0x08006b80                DMA1_Channel6_IRQHandler
+                0x08006b80                UART4_IRQHandler
+                0x08006b80                DMA2_Channel4_IRQHandler
+                0x08006b80                TIM3_IRQHandler
+                0x08006b80                RCC_IRQHandler
+                0x08006b80                DMA1_Channel1_IRQHandler
+                0x08006b80                Default_Handler
+                0x08006b80                USBWakeUp_RMP_IRQHandler
+                0x08006b80                EXTI15_10_IRQHandler
+                0x08006b80                TIM7_IRQHandler
+                0x08006b80                EXTI9_5_IRQHandler
+                0x08006b80                RTC_WKUP_IRQHandler
+                0x08006b80                SPI2_IRQHandler
+                0x08006b80                USB_LP_CAN_RX0_IRQHandler
+                0x08006b80                MemManage_Handler
+                0x08006b80                SVC_Handler
+                0x08006b80                DMA2_Channel5_IRQHandler
+                0x08006b80                DMA1_Channel5_IRQHandler
+                0x08006b80                USB_LP_IRQHandler
+                0x08006b80                TIM1_TRG_COM_TIM17_IRQHandler
+                0x08006b80                DMA1_Channel3_IRQHandler
+                0x08006b80                ADC4_IRQHandler
+                0x08006b80                WWDG_IRQHandler
+                0x08006b80                TIM2_IRQHandler
+                0x08006b80                COMP7_IRQHandler
+                0x08006b80                COMP1_2_3_IRQHandler
+                0x08006b80                EXTI1_IRQHandler
+                0x08006b80                USART2_IRQHandler
+                0x08006b80                COMP4_5_6_IRQHandler
+                0x08006b80                I2C2_ER_IRQHandler
+                0x08006b80                DMA1_Channel2_IRQHandler
+                0x08006b80                TIM8_BRK_IRQHandler
+                0x08006b80                FLASH_IRQHandler
+                0x08006b80                BusFault_Handler
+                0x08006b80                USART1_IRQHandler
+                0x08006b80                SPI3_IRQHandler
+                0x08006b80                I2C1_ER_IRQHandler
+                0x08006b80                USBWakeUp_IRQHandler
+                0x08006b80                DMA2_Channel3_IRQHandler
+                0x08006b80                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x08006b82        0x2 
+ .text.startup  0x08006b84       0x58 Autonomous_Parallel_Parking.o
+                0x08006b84                main
+ .text.setvbuf  0x08006bdc      0x150 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-setvbuf.o)
+                0x08006bdc                setvbuf
  .text.__sflush_r
-                0x08006cd4      0x148 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fflush.o)
-                0x08006cd4                __sflush_r
+                0x08006d2c      0x148 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fflush.o)
+                0x08006d2c                __sflush_r
  .text._fflush_r
-                0x08006e1c       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fflush.o)
-                0x08006e1c                _fflush_r
+                0x08006e74       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fflush.o)
+                0x08006e74                _fflush_r
  .text._cleanup_r
-                0x08006e48        0xc c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
-                0x08006e48                _cleanup_r
+                0x08006ea0        0xc c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
+                0x08006ea0                _cleanup_r
  .text.__sinit.part.1
-                0x08006e54       0xf0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
- .text.__sinit  0x08006f44        0xc c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
-                0x08006f44                __sinit
+                0x08006eac       0xf0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
+ .text.__sinit  0x08006f9c        0xc c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
+                0x08006f9c                __sinit
  .text.__sfp_lock_acquire
-                0x08006f50        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
-                0x08006f50                __sfp_lock_acquire
+                0x08006fa8        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
+                0x08006fa8                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x08006f54        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
-                0x08006f54                __sfp_lock_release
+                0x08006fac        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
+                0x08006fac                __sfp_lock_release
  .text._malloc_trim_r
-                0x08006f58       0x9c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-freer.o)
-                0x08006f58                _malloc_trim_r
- .text._free_r  0x08006ff4      0x1d0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-freer.o)
-                0x08006ff4                _free_r
+                0x08006fb0       0x9c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-freer.o)
+                0x08006fb0                _malloc_trim_r
+ .text._free_r  0x0800704c      0x1d0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-freer.o)
+                0x0800704c                _free_r
  .text._fwalk_reent
-                0x080071c4       0x54 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fwalk.o)
-                0x080071c4                _fwalk_reent
+                0x0800721c       0x54 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fwalk.o)
+                0x0800721c                _fwalk_reent
  .text.__swhatbuf_r
-                0x08007218       0x60 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-makebuf.o)
-                0x08007218                __swhatbuf_r
- .text.malloc   0x08007278       0x10 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-malloc.o)
-                0x08007278                malloc
+                0x08007270       0x60 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-makebuf.o)
+                0x08007270                __swhatbuf_r
+ .text.malloc   0x080072d0       0x10 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-malloc.o)
+                0x080072d0                malloc
  .text._malloc_r
-                0x08007288      0x570 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mallocr.o)
-                0x08007288                _malloc_r
+                0x080072e0      0x570 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mallocr.o)
+                0x080072e0                _malloc_r
  .text.__malloc_lock
-                0x080077f8        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mlock.o)
-                0x080077f8                __malloc_lock
+                0x08007850        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mlock.o)
+                0x08007850                __malloc_lock
  .text.__malloc_unlock
-                0x080077fc        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mlock.o)
-                0x080077fc                __malloc_unlock
- .text._sbrk_r  0x08007800       0x24 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-sbrkr.o)
-                0x08007800                _sbrk_r
- .text.__sread  0x08007824       0x24 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
-                0x08007824                __sread
+                0x08007854        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mlock.o)
+                0x08007854                __malloc_unlock
+ .text._sbrk_r  0x08007858       0x24 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-sbrkr.o)
+                0x08007858                _sbrk_r
+ .text.__sread  0x0800787c       0x24 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
+                0x0800787c                __sread
  .text.__swrite
-                0x08007848       0x3c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
-                0x08007848                __swrite
- .text.__sseek  0x08007884       0x20 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
-                0x08007884                __sseek
+                0x080078a0       0x3c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
+                0x080078a0                __swrite
+ .text.__sseek  0x080078dc       0x20 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
+                0x080078dc                __sseek
  .text.__sclose
-                0x080078a4        0x8 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
-                0x080078a4                __sclose
+                0x080078fc        0x8 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
+                0x080078fc                __sclose
  .text._write_r
-                0x080078ac       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-writer.o)
-                0x080078ac                _write_r
+                0x08007904       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-writer.o)
+                0x08007904                _write_r
  .text._close_r
-                0x080078d8       0x24 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-closer.o)
-                0x080078d8                _close_r
+                0x08007930       0x24 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-closer.o)
+                0x08007930                _close_r
  .text._fclose_r
-                0x080078fc       0x84 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fclose.o)
-                0x080078fc                _fclose_r
+                0x08007954       0x84 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fclose.o)
+                0x08007954                _fclose_r
  .text._fstat_r
-                0x08007980       0x28 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fstatr.o)
-                0x08007980                _fstat_r
+                0x080079d8       0x28 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fstatr.o)
+                0x080079d8                _fstat_r
  .text._lseek_r
-                0x080079a8       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-lseekr.o)
-                0x080079a8                _lseek_r
- .text._read_r  0x080079d4       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-readr.o)
-                0x080079d4                _read_r
+                0x08007a00       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-lseekr.o)
+                0x08007a00                _lseek_r
+ .text._read_r  0x08007a2c       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-readr.o)
+                0x08007a2c                _read_r
  *(.glue_7)
- .glue_7        0x08007a00        0x0 linker stubs
+ .glue_7        0x08007a58        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08007a00        0x0 linker stubs
+ .glue_7t       0x08007a58        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08007a00        0x0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
+ .eh_frame      0x08007a58        0x0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
  *(.init)
- .init          0x08007a00        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crti.o
-                0x08007a00                _init
- .init          0x08007a04        0x8 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
+ .init          0x08007a58        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crti.o
+                0x08007a58                _init
+ .init          0x08007a5c        0x8 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
  *(.fini)
- .fini          0x08007a0c        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crti.o
-                0x08007a0c                _fini
- .fini          0x08007a10        0x8 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
-                0x08007a18                . = ALIGN (0x4)
-                0x08007a18                _etext = .
+ .fini          0x08007a64        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crti.o
+                0x08007a64                _fini
+ .fini          0x08007a68        0x8 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
+                0x08007a70                . = ALIGN (0x4)
+                0x08007a70                _etext = .
 
-.vfp11_veneer   0x08007a18        0x0
- .vfp11_veneer  0x08007a18        0x0 linker stubs
+.vfp11_veneer   0x08007a70        0x0
+ .vfp11_veneer  0x08007a70        0x0 linker stubs
 
-.v4_bx          0x08007a18        0x0
- .v4_bx         0x08007a18        0x0 linker stubs
+.v4_bx          0x08007a70        0x0
+ .v4_bx         0x08007a70        0x0 linker stubs
 
-.iplt           0x08007a18        0x0
- .iplt          0x08007a18        0x0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
+.iplt           0x08007a70        0x0
+ .iplt          0x08007a70        0x0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
 
-.rodata         0x08007a18       0x64
-                0x08007a18                . = ALIGN (0x4)
+.rodata         0x08007a70       0x64
+                0x08007a70                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08007a18        0x4 ../arch/stm32/f3/src/stm32f3xx_hal_uart.o
- .rodata        0x08007a1c       0x20 ../arch/stm32/f3/src/stm32f3xx_hal_rcc.o
-                0x08007a1c                aPLLMULFactorTable
-                0x08007a2c                aPredivFactorTable
- .rodata        0x08007a3c       0x18 ../arch/stm32/f3/src/CMSIS/system_stm32f3xx.o
-                0x08007a3c                AHBPrescTable
-                0x08007a4c                APBPrescTable
+ .rodata        0x08007a70        0x4 ../arch/stm32/f3/src/stm32f3xx_hal_uart.o
+ .rodata        0x08007a74       0x20 ../arch/stm32/f3/src/stm32f3xx_hal_rcc.o
+                0x08007a74                aPLLMULFactorTable
+                0x08007a84                aPredivFactorTable
+ .rodata        0x08007a94       0x18 ../arch/stm32/f3/src/CMSIS/system_stm32f3xx.o
+                0x08007a94                AHBPrescTable
+                0x08007aa4                APBPrescTable
  *(.rodata*)
  .rodata._global_impure_ptr
-                0x08007a54        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-impure.o)
-                0x08007a54                _global_impure_ptr
+                0x08007aac        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-impure.o)
+                0x08007aac                _global_impure_ptr
  .rodata.str1.4
-                0x08007a58       0x24 user_source/hal_interface/newlib_stubs.o
+                0x08007ab0       0x24 user_source/hal_interface/newlib_stubs.o
                                  0x22 (size before relaxing)
-                0x08007a7c                . = ALIGN (0x4)
+                0x08007ad4                . = ALIGN (0x4)
 
-.rel.dyn        0x08007a7c        0x0
- .rel.iplt      0x08007a7c        0x0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
+.rel.dyn        0x08007ad4        0x0
+ .rel.iplt      0x08007ad4        0x0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08007a7c        0x0
-                0x08007a7c                __exidx_start = .
+.ARM            0x08007ad4        0x0
+                0x08007ad4                __exidx_start = .
  *(.ARM.exidx*)
-                0x08007a7c                __exidx_end = .
+                0x08007ad4                __exidx_end = .
 
-.preinit_array  0x08007a7c        0x0
-                0x08007a7c                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x08007ad4        0x0
+                0x08007ad4                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x08007a7c                PROVIDE (__preinit_array_end, .)
+                0x08007ad4                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x08007a7c        0x8
-                0x08007a7c                PROVIDE (__init_array_start, .)
+.init_array     0x08007ad4        0x8
+                0x08007ad4                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  .init_array.00000
-                0x08007a7c        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__call_atexit.o)
+                0x08007ad4        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x08007a80        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
-                0x08007a84                PROVIDE (__init_array_end, .)
+ .init_array    0x08007ad8        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
+                0x08007adc                PROVIDE (__init_array_end, .)
 
-.fini_array     0x08007a84        0x4
-                0x08007a84                PROVIDE (__fini_array_start, .)
+.fini_array     0x08007adc        0x4
+                0x08007adc                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08007a84        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
-                0x08007a88                PROVIDE (__fini_array_end, .)
-                0x08007a88                _sidata = LOADADDR (.data)
+ .fini_array    0x08007adc        0x4 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
+                0x08007ae0                PROVIDE (__fini_array_end, .)
+                0x08007ae0                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x844 load address 0x08007a88
+.data           0x20000000      0x844 load address 0x08007ae0
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -1684,15 +1686,15 @@ LOAD c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc
                 0x20000840                __malloc_sbrk_base
                 0x20000844                . = ALIGN (0x4)
                 0x20000844                _edata = .
-                0x080082cc                _siccmram = LOADADDR (.ccmram)
+                0x08008324                _siccmram = LOADADDR (.ccmram)
 
-.jcr            0x20000844        0x0 load address 0x080082cc
+.jcr            0x20000844        0x0 load address 0x08008324
  .jcr           0x20000844        0x0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
 
-.igot.plt       0x20000844        0x0 load address 0x080082cc
+.igot.plt       0x20000844        0x0 load address 0x08008324
  .igot.plt      0x20000844        0x0 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x080082cc
+.ccmram         0x10000000        0x0 load address 0x08008324
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _sccmram = .
  *(.ccmram)
@@ -1976,7 +1978,7 @@ LOAD c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc
 LOAD c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
 OUTPUT(Autonomous_Parallel_Parking.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x10593
+.debug_info     0x00000000    0x1069c
  .debug_info    0x00000000       0xbf ../arch/stm32/f3/src/stm32f3xx_hal_msp.o
  .debug_info    0x000000bf      0x9ec ../arch/stm32/f3/src/stm32f3xx_hal_timebase_tim.o
  .debug_info    0x00000aab     0x18ee ../arch/stm32/f3/src/stm32f3xx_hal_uart.o
@@ -1994,15 +1996,15 @@ OUTPUT(Autonomous_Parallel_Parking.elf elf32-littlearm)
  .debug_info    0x0000b139      0x346 user_source/state_machine.o
  .debug_info    0x0000b47f      0xaf8 user_source/uart.o
  .debug_info    0x0000bf77     0x104c user_source/sensor_timer.o
- .debug_info    0x0000cfc3      0x411 user_source/motion.o
- .debug_info    0x0000d3d4       0x96 user_source/foo.o
- .debug_info    0x0000d46a      0x731 user_source/hal_interface/uart_hal.o
- .debug_info    0x0000db9b      0x335 user_source/hal_interface/cpu.o
- .debug_info    0x0000ded0      0x25e user_source/hal_interface/pin_setup.o
- .debug_info    0x0000e12e      0xb23 user_source/hal_interface/pwm_hal.o
- .debug_info    0x0000ec51      0x880 user_source/hal_interface/newlib_stubs.o
- .debug_info    0x0000f4d1      0x553 user_source/hal_interface/interrupts.o
- .debug_info    0x0000fa24      0xb6f user_source/hal_interface/cube_hal_msp.o
+ .debug_info    0x0000cfc3      0x51a user_source/motion.o
+ .debug_info    0x0000d4dd       0x96 user_source/foo.o
+ .debug_info    0x0000d573      0x731 user_source/hal_interface/uart_hal.o
+ .debug_info    0x0000dca4      0x335 user_source/hal_interface/cpu.o
+ .debug_info    0x0000dfd9      0x25e user_source/hal_interface/pin_setup.o
+ .debug_info    0x0000e237      0xb23 user_source/hal_interface/pwm_hal.o
+ .debug_info    0x0000ed5a      0x880 user_source/hal_interface/newlib_stubs.o
+ .debug_info    0x0000f5da      0x553 user_source/hal_interface/interrupts.o
+ .debug_info    0x0000fb2d      0xb6f user_source/hal_interface/cube_hal_msp.o
 
 .debug_abbrev   0x00000000     0x301c
  .debug_abbrev  0x00000000       0x70 ../arch/stm32/f3/src/stm32f3xx_hal_msp.o
@@ -2086,7 +2088,7 @@ OUTPUT(Autonomous_Parallel_Parking.elf elf32-littlearm)
  .debug_aranges
                 0x00000328       0x20 user_source/hal_interface/cube_hal_msp.o
 
-.debug_line     0x00000000     0x5d19
+.debug_line     0x00000000     0x5d26
  .debug_line    0x00000000      0x155 ../arch/stm32/f3/src/stm32f3xx_hal_msp.o
  .debug_line    0x00000155      0x217 ../arch/stm32/f3/src/stm32f3xx_hal_timebase_tim.o
  .debug_line    0x0000036c      0xc32 ../arch/stm32/f3/src/stm32f3xx_hal_uart.o
@@ -2104,17 +2106,17 @@ OUTPUT(Autonomous_Parallel_Parking.elf elf32-littlearm)
  .debug_line    0x000044a7      0x1fb user_source/state_machine.o
  .debug_line    0x000046a2      0x27b user_source/uart.o
  .debug_line    0x0000491d      0x31c user_source/sensor_timer.o
- .debug_line    0x00004c39      0x1c9 user_source/motion.o
- .debug_line    0x00004e02       0x44 user_source/foo.o
- .debug_line    0x00004e46      0x221 user_source/hal_interface/uart_hal.o
- .debug_line    0x00005067      0x1f1 user_source/hal_interface/cpu.o
- .debug_line    0x00005258      0x198 user_source/hal_interface/pin_setup.o
- .debug_line    0x000053f0      0x2a4 user_source/hal_interface/pwm_hal.o
- .debug_line    0x00005694      0x279 user_source/hal_interface/newlib_stubs.o
- .debug_line    0x0000590d      0x1d4 user_source/hal_interface/interrupts.o
- .debug_line    0x00005ae1      0x238 user_source/hal_interface/cube_hal_msp.o
+ .debug_line    0x00004c39      0x1d6 user_source/motion.o
+ .debug_line    0x00004e0f       0x44 user_source/foo.o
+ .debug_line    0x00004e53      0x221 user_source/hal_interface/uart_hal.o
+ .debug_line    0x00005074      0x1f1 user_source/hal_interface/cpu.o
+ .debug_line    0x00005265      0x198 user_source/hal_interface/pin_setup.o
+ .debug_line    0x000053fd      0x2a4 user_source/hal_interface/pwm_hal.o
+ .debug_line    0x000056a1      0x279 user_source/hal_interface/newlib_stubs.o
+ .debug_line    0x0000591a      0x1d4 user_source/hal_interface/interrupts.o
+ .debug_line    0x00005aee      0x238 user_source/hal_interface/cube_hal_msp.o
 
-.debug_str      0x00000000     0x3d52
+.debug_str      0x00000000     0x3de7
  .debug_str     0x00000000      0x1d0 ../arch/stm32/f3/src/stm32f3xx_hal_msp.o
                                 0x211 (size before relaxing)
  .debug_str     0x000001d0      0x9d1 ../arch/stm32/f3/src/stm32f3xx_hal_timebase_tim.o
@@ -2141,29 +2143,29 @@ OUTPUT(Autonomous_Parallel_Parking.elf elf32-littlearm)
                                 0x336 (size before relaxing)
  .debug_str     0x00003115       0x95 Autonomous_Parallel_Parking.o
                                 0x2de (size before relaxing)
- .debug_str     0x000031aa      0x160 user_source/state_machine.o
+ .debug_str     0x000031aa      0x1d2 user_source/state_machine.o
                                 0x38b (size before relaxing)
- .debug_str     0x0000330a      0x486 user_source/uart.o
+ .debug_str     0x0000337c      0x486 user_source/uart.o
                                 0x6ab (size before relaxing)
- .debug_str     0x00003790       0xfc user_source/sensor_timer.o
+ .debug_str     0x00003802       0xfc user_source/sensor_timer.o
                                 0xd79 (size before relaxing)
- .debug_str     0x0000388c       0x6a user_source/motion.o
-                                0x266 (size before relaxing)
- .debug_str     0x000038f6       0x2d user_source/foo.o
+ .debug_str     0x000038fe       0x8d user_source/motion.o
+                                0x289 (size before relaxing)
+ .debug_str     0x0000398b       0x2d user_source/foo.o
                                 0x14f (size before relaxing)
- .debug_str     0x00003923       0x3b user_source/hal_interface/uart_hal.o
+ .debug_str     0x000039b8       0x3b user_source/hal_interface/uart_hal.o
                                 0x751 (size before relaxing)
- .debug_str     0x0000395e       0x41 user_source/hal_interface/cpu.o
+ .debug_str     0x000039f3       0x41 user_source/hal_interface/cpu.o
                                 0x3b4 (size before relaxing)
- .debug_str     0x0000399f       0x36 user_source/hal_interface/pin_setup.o
+ .debug_str     0x00003a34       0x36 user_source/hal_interface/pin_setup.o
                                 0x2ae (size before relaxing)
- .debug_str     0x000039d5       0xcc user_source/hal_interface/pwm_hal.o
+ .debug_str     0x00003a6a       0xcc user_source/hal_interface/pwm_hal.o
                                 0x788 (size before relaxing)
- .debug_str     0x00003aa1      0x1fa user_source/hal_interface/newlib_stubs.o
+ .debug_str     0x00003b36      0x1fa user_source/hal_interface/newlib_stubs.o
                                 0x4b2 (size before relaxing)
- .debug_str     0x00003c9b       0x71 user_source/hal_interface/interrupts.o
+ .debug_str     0x00003d30       0x71 user_source/hal_interface/interrupts.o
                                 0x77d (size before relaxing)
- .debug_str     0x00003d0c       0x46 user_source/hal_interface/cube_hal_msp.o
+ .debug_str     0x00003da1       0x46 user_source/hal_interface/cube_hal_msp.o
                                 0x980 (size before relaxing)
 
 .comment        0x00000000       0x6e
@@ -2194,7 +2196,7 @@ OUTPUT(Autonomous_Parallel_Parking.elf elf32-littlearm)
  .comment       0x0000006e       0x6f user_source/hal_interface/interrupts.o
  .comment       0x0000006e       0x6f user_source/hal_interface/cube_hal_msp.o
 
-.debug_frame    0x00000000     0x28a4
+.debug_frame    0x00000000     0x28d4
  .debug_frame   0x00000000       0x50 ../arch/stm32/f3/src/stm32f3xx_hal_msp.o
  .debug_frame   0x00000050       0x5c ../arch/stm32/f3/src/stm32f3xx_hal_timebase_tim.o
  .debug_frame   0x000000ac      0x5f4 ../arch/stm32/f3/src/stm32f3xx_hal_uart.o
@@ -2211,33 +2213,33 @@ OUTPUT(Autonomous_Parallel_Parking.elf elf32-littlearm)
  .debug_frame   0x00001c2c       0xa8 user_source/state_machine.o
  .debug_frame   0x00001cd4       0xa4 user_source/uart.o
  .debug_frame   0x00001d78       0xc8 user_source/sensor_timer.o
- .debug_frame   0x00001e40       0xe4 user_source/motion.o
- .debug_frame   0x00001f24       0x30 user_source/foo.o
- .debug_frame   0x00001f54       0x4c user_source/hal_interface/uart_hal.o
- .debug_frame   0x00001fa0       0x50 user_source/hal_interface/cpu.o
- .debug_frame   0x00001ff0       0x2c user_source/hal_interface/pin_setup.o
- .debug_frame   0x0000201c       0x90 user_source/hal_interface/pwm_hal.o
- .debug_frame   0x000020ac      0x150 user_source/hal_interface/newlib_stubs.o
- .debug_frame   0x000021fc       0x5c user_source/hal_interface/interrupts.o
- .debug_frame   0x00002258       0x58 user_source/hal_interface/cube_hal_msp.o
- .debug_frame   0x000022b0       0x58 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-reent.o)
- .debug_frame   0x00002308       0x50 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-setvbuf.o)
- .debug_frame   0x00002358       0x6c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fflush.o)
- .debug_frame   0x000023c4      0x124 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
- .debug_frame   0x000024e8       0x74 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-freer.o)
- .debug_frame   0x0000255c       0x54 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fwalk.o)
- .debug_frame   0x000025b0       0x68 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-makebuf.o)
- .debug_frame   0x00002618       0x30 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-malloc.o)
- .debug_frame   0x00002648       0x58 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mallocr.o)
- .debug_frame   0x000026a0       0x30 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mlock.o)
- .debug_frame   0x000026d0       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-sbrkr.o)
- .debug_frame   0x000026fc       0x88 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
- .debug_frame   0x00002784       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-writer.o)
- .debug_frame   0x000027b0       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-closer.o)
- .debug_frame   0x000027dc       0x44 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fclose.o)
- .debug_frame   0x00002820       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fstatr.o)
- .debug_frame   0x0000284c       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-lseekr.o)
- .debug_frame   0x00002878       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-readr.o)
+ .debug_frame   0x00001e40      0x114 user_source/motion.o
+ .debug_frame   0x00001f54       0x30 user_source/foo.o
+ .debug_frame   0x00001f84       0x4c user_source/hal_interface/uart_hal.o
+ .debug_frame   0x00001fd0       0x50 user_source/hal_interface/cpu.o
+ .debug_frame   0x00002020       0x2c user_source/hal_interface/pin_setup.o
+ .debug_frame   0x0000204c       0x90 user_source/hal_interface/pwm_hal.o
+ .debug_frame   0x000020dc      0x150 user_source/hal_interface/newlib_stubs.o
+ .debug_frame   0x0000222c       0x5c user_source/hal_interface/interrupts.o
+ .debug_frame   0x00002288       0x58 user_source/hal_interface/cube_hal_msp.o
+ .debug_frame   0x000022e0       0x58 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-reent.o)
+ .debug_frame   0x00002338       0x50 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-setvbuf.o)
+ .debug_frame   0x00002388       0x6c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fflush.o)
+ .debug_frame   0x000023f4      0x124 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-findfp.o)
+ .debug_frame   0x00002518       0x74 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-freer.o)
+ .debug_frame   0x0000258c       0x54 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fwalk.o)
+ .debug_frame   0x000025e0       0x68 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-makebuf.o)
+ .debug_frame   0x00002648       0x30 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-malloc.o)
+ .debug_frame   0x00002678       0x58 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mallocr.o)
+ .debug_frame   0x000026d0       0x30 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-mlock.o)
+ .debug_frame   0x00002700       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000272c       0x88 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-stdio.o)
+ .debug_frame   0x000027b4       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-writer.o)
+ .debug_frame   0x000027e0       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-closer.o)
+ .debug_frame   0x0000280c       0x44 c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fclose.o)
+ .debug_frame   0x00002850       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-fstatr.o)
+ .debug_frame   0x0000287c       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-lseekr.o)
+ .debug_frame   0x000028a8       0x2c c:/users/hari/documents/sandbox/gcc-arm-none-eabi-5_4-2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc.a(lib_a-readr.o)
 
 .debug_loc      0x00000000     0xa240
  .debug_loc     0x00000000       0x60 ../arch/stm32/f3/src/stm32f3xx_hal_timebase_tim.o

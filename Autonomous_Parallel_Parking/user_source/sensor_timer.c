@@ -20,13 +20,13 @@ float g_inches_l = 0;
 int32_t pulse_in(GPIO_TypeDef* echo_port, uint32_t hexval ) 
 {
   int32_t counter = 0;
-  while((echo_port->IDR & hexval) == 0) {continue;} 
+  //int32_t timeout = 0;
+  while((echo_port->IDR & hexval) == 0){continue;}
   //Time the pulse. Start counting clock cycles until the echoPin goes low.
-
+  //timeout = 0;
   while((echo_port->IDR & hexval) == hexval) {
       counter++;
-      // HAL_GPIO_WritePin(GPIOE, GPIO_PIN_9, flag);
-      // flag = flag ? 0 : 1;
+      
       asm("nop");
     }
   return counter;

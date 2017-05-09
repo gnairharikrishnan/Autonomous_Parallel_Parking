@@ -11,7 +11,7 @@
 
 
 int g_current_state;
-#define TURN_FORWARD_DISTANCE_THRESH 20
+#define TURN_FORWARD_DISTANCE_THRESH 18
 #define DIP_RISE_THRESH				 100
 #define REF_DIST_FROM_RGT_WALL 10
 
@@ -136,14 +136,15 @@ uint8_t state_execute(void)
 			//	state_next(STATE_PARK);
 
 			//}
+			
 			if (fd < TURN_FORWARD_DISTANCE_THRESH)
 				next_dir = LEFT; //calculate_next_dominant_turn(ld, rd);
 			else if(rd > REF_DIST_FROM_RGT_WALL)
 				next_dir = RECENTER_RIGHT; //Move towards the wall 
-				else if(rd < REF_DIST_FROM_RGT_WALL - 6)
+			else if(rd < (REF_DIST_FROM_RGT_WALL - 5))
 					next_dir = RECENTER_LEFT;
-		            else
-					next_dir = FORWARD;
+            else
+				next_dir = FORWARD;
 		break;
 
 		case STATE_PARK:
