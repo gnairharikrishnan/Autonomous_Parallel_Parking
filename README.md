@@ -1,4 +1,4 @@
-Autonomous Parallel and Perpendicular parking Vehicle using STM32F3 Development Board
+**Autonomous Parallel and Perpendicular parking Vehicle using STM32F3 Development Board**
 
 UART and PWM code acquired from  Abhi's GIT repo: https://github.com/Aghosh993/EL6483_EmbeddedSystems
 
