@@ -1,0 +1,8 @@
+arch/
+
+*.o
+*.d
+*.elf
+*.bin
+*.map
+*.srec
